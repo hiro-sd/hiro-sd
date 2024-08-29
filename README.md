@@ -1,6 +1,7 @@
 ## Hi there 👋
 
 - 🕺 22 years old
-- 🌱 I’m currently learning Flutter.
+- 🏠 Live in Hokkaido, Japan🇯🇵
+- 🌱 Currently learning Flutter📚
 - ⚡ Fun fact: ☕︎✈️🪐⚾️
 
