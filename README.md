@@ -1,7 +1,7 @@
 ## Hi there 👋
 
-- 🕺 22 years old
-- 🏠 Live in Hokkaido, Japan🇯🇵
+- 🕺 23 years old
+- 🏠 Live in Chiba, Japan🇯🇵
 - 🌱 Obsessed with Flutter📚
 - 🤩 Favorites: ☕︎✈️🪐⚾
 
