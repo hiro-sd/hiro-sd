@@ -5,6 +5,21 @@
 - 🌱 Obsessed with Flutter📚
 - 🤩 Favorites: ☕︎✈️🪐⚾
 
+### GitHub stats
+
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/hiro-sd/hiro-sd/refs/heads/main/assets/github-stats-dark.svg" />
+    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/hiro-sd/hiro-sd/refs/heads/main/assets/github-stats-light.svg" />
+    <img height="190" alt="Hiroto's GitHub activity stats" src="https://raw.githubusercontent.com/hiro-sd/hiro-sd/refs/heads/main/assets/github-stats-light.svg" />
+  </picture>
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/hiro-sd/hiro-sd/refs/heads/main/assets/top-languages-dark.svg" />
+    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/hiro-sd/hiro-sd/refs/heads/main/assets/top-languages-light.svg" />
+    <img height="190" alt="Hiroto's most used programming languages" src="https://raw.githubusercontent.com/hiro-sd/hiro-sd/refs/heads/main/assets/top-languages-light.svg" />
+  </picture>
+</p>
+
 ### Contribution activity
 
 <picture>

@@ -1,4 +1,4 @@
-name: Generate contribution snake
+name: Update profile cards
 
 on:
   schedule:
@@ -12,18 +12,40 @@ permissions:
   contents: write
 
 concurrency:
-  group: contribution-snake
+  group: profile-cards
   cancel-in-progress: true
 
 jobs:
   generate:
     runs-on: ubuntu-latest
-    timeout-minutes: 5
+    timeout-minutes: 10
     steps:
       - name: Check out profile repository
         uses: actions/checkout@v7
 
-      - name: Generate light and dark SVGs
+      - name: Check out GitHub Readme Stats
+        uses: actions/checkout@v7
+        with:
+          repository: anuraghazra/github-readme-stats
+          ref: 54a7985aeefda00d5eadb55b80c17c7f976c37d2
+          path: .github-readme-stats
+          persist-credentials: false
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v7
+        with:
+          node-version: '24'
+
+      - name: Install GitHub Readme Stats dependencies
+        working-directory: .github-readme-stats
+        run: npm ci --omit=dev --ignore-scripts --no-audit --no-fund
+
+      - name: Generate GitHub stats and language cards
+        env:
+          PAT_1: ${{ secrets.GITHUB_TOKEN }}
+        run: node scripts/generate-readme-stats.mjs
+
+      - name: Generate contribution snake
         uses: Platane/snk/svg-only@v3
         with:
           github_user_name: ${{ github.repository_owner }}
@@ -31,13 +53,13 @@ jobs:
             assets/github-contribution-grid-snake.svg
             assets/github-contribution-grid-snake-dark.svg?palette=github-dark
 
-      - name: Publish updated SVGs
+      - name: Publish updated cards and snake
         run: |
-          git add assets/github-contribution-grid-snake.svg assets/github-contribution-grid-snake-dark.svg
+          git add assets/github-stats-light.svg assets/github-stats-dark.svg assets/top-languages-light.svg assets/top-languages-dark.svg assets/github-contribution-grid-snake.svg assets/github-contribution-grid-snake-dark.svg
           if git diff --cached --quiet; then
             exit 0
           fi
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git commit -m 'Update contribution snake SVGs'
+          git commit -m 'Update profile cards'
           git push origin HEAD:main
