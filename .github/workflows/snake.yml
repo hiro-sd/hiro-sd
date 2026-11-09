@@ -42,7 +42,7 @@ jobs:
 
       - name: Generate GitHub stats and language cards
         env:
-          PAT_1: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: node scripts/generate-readme-stats.mjs
 
       - name: Generate contribution snake
