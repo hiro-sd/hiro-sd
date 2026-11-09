@@ -4,7 +4,8 @@ import { pathToFileURL } from "node:url";
 
 const sourceDir = resolve(process.env.STATS_SOURCE_DIR ?? ".github-readme-stats");
 const username = process.env.GITHUB_REPOSITORY_OWNER ?? "hiro-sd";
-const token = process.env.GITHUB_TOKEN ?? process.env.PAT_1;
+const privateToken = process.env.PROFILE_STATS_TOKEN?.trim();
+const token = privateToken || process.env.GITHUB_TOKEN || process.env.PAT_1;
 
 if (!token) {
   throw new Error("GITHUB_TOKEN must contain a GitHub token");
@@ -37,6 +38,17 @@ async function githubJson(url, options = {}) {
     throw new Error(`GitHub GraphQL: ${data.errors.map((e) => e.message).join("; ")}`);
   }
   return data;
+}
+
+async function verifyPrivateToken() {
+  const viewer = await githubJson("https://api.github.com/user");
+  if (viewer.login?.toLowerCase() !== username.toLowerCase()) {
+    throw new Error(`PROFILE_STATS_TOKEN must belong to ${username}`);
+  }
+  if (!Number.isInteger(viewer.owned_private_repos)) {
+    throw new Error("PROFILE_STATS_TOKEN needs the read:user scope");
+  }
+  return viewer.owned_private_repos;
 }
 
 async function fetchProfileStats() {
@@ -85,11 +97,15 @@ async function fetchProfileStats() {
 async function fetchOwnedRepos() {
   const repos = [];
   for (let page = 1; page <= 10; page++) {
-    const batch = await githubJson(
-      `https://api.github.com/users/${encodeURIComponent(username)}/repos?type=owner&per_page=100&page=${page}`,
-    );
+    const url = privateToken
+      ? `https://api.github.com/user/repos?affiliation=owner&visibility=all&per_page=100&page=${page}`
+      : `https://api.github.com/users/${encodeURIComponent(username)}/repos?type=owner&per_page=100&page=${page}`;
+    const batch = await githubJson(url);
     repos.push(...batch);
     if (batch.length < 100) break;
+    if (page === 10) {
+      throw new Error("Repository listing exceeded 1,000 entries");
+    }
   }
   return repos;
 }
@@ -120,7 +136,15 @@ async function fetchLanguages(repos) {
   );
 }
 
+const expectedPrivateRepos = privateToken ? await verifyPrivateToken() : 0;
 const [stats, repos] = await Promise.all([fetchProfileStats(), fetchOwnedRepos()]);
+if (privateToken) {
+  const includedPrivateRepos = repos.filter((repo) => repo.private).length;
+  if (includedPrivateRepos < expectedPrivateRepos) {
+    throw new Error("PROFILE_STATS_TOKEN needs access to all owned private repositories");
+  }
+  console.log(`Included ${includedPrivateRepos} owned private repositories`);
+}
 stats.totalStars = repos.reduce((sum, repo) => sum + repo.stargazers_count, 0);
 stats.rank = calculateRank({
   all_commits: false,

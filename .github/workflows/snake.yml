@@ -43,6 +43,7 @@ jobs:
       - name: Generate GitHub stats and language cards
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PROFILE_STATS_TOKEN: ${{ secrets.PROFILE_STATS_TOKEN }}
         run: node scripts/generate-readme-stats.mjs
 
       - name: Generate contribution snake
