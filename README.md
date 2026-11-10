@@ -5,6 +5,16 @@
 - 🌱 Obsessed with Flutter📚
 - 🤩 Favorites: ☕︎✈️🪐⚾
 
+### Skills
+
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://skillicons.dev/icons?i=flutter,dart,git,github&amp;theme=dark" />
+    <source media="(prefers-color-scheme: light)" srcset="https://skillicons.dev/icons?i=flutter,dart,git,github&amp;theme=light" />
+    <img alt="Flutter, Dart, Git, and GitHub" src="https://skillicons.dev/icons?i=flutter,dart,git,github&amp;theme=light" />
+  </picture>
+</p>
+
 ### GitHub stats
 
 <p align="center">
