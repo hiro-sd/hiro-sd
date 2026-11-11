@@ -4,9 +4,9 @@
 
 <p align="center">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://skillicons.dev/icons?i=py%2Copencv%2Cflutter%2Cdart%2Cfirebase%2Cts%2Creact%2Cnextjs%2Ctailwind%2Cvercel%2Cgit%2Cgithub&amp;theme=dark&amp;perline=6" />
-    <source media="(prefers-color-scheme: light)" srcset="https://skillicons.dev/icons?i=py%2Copencv%2Cflutter%2Cdart%2Cfirebase%2Cts%2Creact%2Cnextjs%2Ctailwind%2Cvercel%2Cgit%2Cgithub&amp;theme=light&amp;perline=6" />
-    <img alt="Python, OpenCV, Flutter, Dart, Firebase, TypeScript, React, Next.js, Tailwind CSS, Vercel, Git, and GitHub" src="https://skillicons.dev/icons?i=py%2Copencv%2Cflutter%2Cdart%2Cfirebase%2Cts%2Creact%2Cnextjs%2Ctailwind%2Cvercel%2Cgit%2Cgithub&amp;theme=light&amp;perline=6" />
+    <source media="(prefers-color-scheme: dark)" srcset="https://skillicons.dev/icons?i=py%2Copencv%2Cflutter%2Cdart%2Cfirebase%2Cts%2Creact%2Cnextjs%2Ctailwind%2Cvercel%2Cazure%2Cgit%2Cgithub&amp;theme=dark&amp;perline=7" />
+    <source media="(prefers-color-scheme: light)" srcset="https://skillicons.dev/icons?i=py%2Copencv%2Cflutter%2Cdart%2Cfirebase%2Cts%2Creact%2Cnextjs%2Ctailwind%2Cvercel%2Cazure%2Cgit%2Cgithub&amp;theme=light&amp;perline=7" />
+    <img alt="Python, OpenCV, Flutter, Dart, Firebase, TypeScript, React, Next.js, Tailwind CSS, Vercel, Azure, Git, and GitHub" src="https://skillicons.dev/icons?i=py%2Copencv%2Cflutter%2Cdart%2Cfirebase%2Cts%2Creact%2Cnextjs%2Ctailwind%2Cvercel%2Cazure%2Cgit%2Cgithub&amp;theme=light&amp;perline=7" />
   </picture>
 </p>
 
