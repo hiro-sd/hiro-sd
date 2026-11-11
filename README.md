@@ -9,9 +9,9 @@
 
 <p align="center">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://skillicons.dev/icons?i=flutter%2Cdart%2Cts%2Creact%2Cnextjs%2Ctailwind%2Cgit%2Cgithub&amp;theme=dark&amp;perline=4" />
-    <source media="(prefers-color-scheme: light)" srcset="https://skillicons.dev/icons?i=flutter%2Cdart%2Cts%2Creact%2Cnextjs%2Ctailwind%2Cgit%2Cgithub&amp;theme=light&amp;perline=4" />
-    <img alt="Flutter, Dart, TypeScript, React, Next.js, Tailwind CSS, Git, and GitHub" src="https://skillicons.dev/icons?i=flutter%2Cdart%2Cts%2Creact%2Cnextjs%2Ctailwind%2Cgit%2Cgithub&amp;theme=light&amp;perline=4" />
+    <source media="(prefers-color-scheme: dark)" srcset="https://skillicons.dev/icons?i=py%2Cflutter%2Cdart%2Cts%2Creact%2Cnextjs%2Ctailwind%2Cgit%2Cgithub&amp;theme=dark&amp;perline=5" />
+    <source media="(prefers-color-scheme: light)" srcset="https://skillicons.dev/icons?i=py%2Cflutter%2Cdart%2Cts%2Creact%2Cnextjs%2Ctailwind%2Cgit%2Cgithub&amp;theme=light&amp;perline=5" />
+    <img alt="Python, Flutter, Dart, TypeScript, React, Next.js, Tailwind CSS, Git, and GitHub" src="https://skillicons.dev/icons?i=py%2Cflutter%2Cdart%2Cts%2Creact%2Cnextjs%2Ctailwind%2Cgit%2Cgithub&amp;theme=light&amp;perline=5" />
   </picture>
 </p>
 
