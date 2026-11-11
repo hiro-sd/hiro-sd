@@ -9,9 +9,9 @@
 
 <p align="center">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://skillicons.dev/icons?i=py%2Cflutter%2Cdart%2Cts%2Creact%2Cnextjs%2Ctailwind%2Cgit%2Cgithub&amp;theme=dark&amp;perline=5" />
-    <source media="(prefers-color-scheme: light)" srcset="https://skillicons.dev/icons?i=py%2Cflutter%2Cdart%2Cts%2Creact%2Cnextjs%2Ctailwind%2Cgit%2Cgithub&amp;theme=light&amp;perline=5" />
-    <img alt="Python, Flutter, Dart, TypeScript, React, Next.js, Tailwind CSS, Git, and GitHub" src="https://skillicons.dev/icons?i=py%2Cflutter%2Cdart%2Cts%2Creact%2Cnextjs%2Ctailwind%2Cgit%2Cgithub&amp;theme=light&amp;perline=5" />
+    <source media="(prefers-color-scheme: dark)" srcset="https://skillicons.dev/icons?i=py%2Copencv%2Cflutter%2Cdart%2Cfirebase%2Cts%2Creact%2Cnextjs%2Ctailwind%2Cvercel%2Cgit%2Cgithub&amp;theme=dark&amp;perline=6" />
+    <source media="(prefers-color-scheme: light)" srcset="https://skillicons.dev/icons?i=py%2Copencv%2Cflutter%2Cdart%2Cfirebase%2Cts%2Creact%2Cnextjs%2Ctailwind%2Cvercel%2Cgit%2Cgithub&amp;theme=light&amp;perline=6" />
+    <img alt="Python, OpenCV, Flutter, Dart, Firebase, TypeScript, React, Next.js, Tailwind CSS, Vercel, Git, and GitHub" src="https://skillicons.dev/icons?i=py%2Copencv%2Cflutter%2Cdart%2Cfirebase%2Cts%2Creact%2Cnextjs%2Ctailwind%2Cvercel%2Cgit%2Cgithub&amp;theme=light&amp;perline=6" />
   </picture>
 </p>
 
